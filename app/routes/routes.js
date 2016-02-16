@@ -4,4 +4,6 @@ module.exports = function(app) {
 
   app.get('/price', price.request);
 
+  app.get('/quantity', price.request);
+
 };
