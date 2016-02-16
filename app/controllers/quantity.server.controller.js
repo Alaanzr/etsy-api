@@ -16,9 +16,6 @@ exports.getData = function() {
     });
 };
 
-
-
-
 function quantity(JsonObj) {
   var result = [];
   JsonObj.forEach(function(item) {
