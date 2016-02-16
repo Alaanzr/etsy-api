@@ -23,8 +23,6 @@ describe('quantity methods',function() {
 
     it('should return average', function() {
       expect(quantityController.average(jsonItem)).toEqual((1+4+3+5)/4);
-      console.log('item', jsonItem);
-      console.log('function', quantityController.average(jsonItem));
     });
 
     it('should return the min quantity per item', function(){
