@@ -1,4 +1,3 @@
-//API call /quantity
 
  var frisby = require('frisby');
  var localUrl = 'http://localhost:3000/etsyData';
