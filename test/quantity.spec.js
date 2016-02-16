@@ -35,4 +35,10 @@ describe('quantity methods',function() {
       expect(quantityController.max(jsonItem)).toBe(5);
     });
 
+    it('should return the max quantity per item', function(){
+      quantityController.getData();
+    });
+
+
+
 });
