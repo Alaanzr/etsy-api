@@ -1,15 +1,30 @@
 var apiCall = require('./apiCall.server.controller.js');
+var request = require('request');
 
-//exports.request = function(){
- //var etsyData = apiCall();
- //console.log('etsy call', etsyData);
-//};
+exports.getData = function() {
+  request('https://openapi.etsy.com/v2/listings/active?api_key=96kg7j4073g5j4nc9tk5usgw', function(error, response, body) {
+    var etsyData = {};
+      if (!error && response.statusCode === 200) {
+        etsyData = JSON.parse(body);
+        //console.log(etsyData);
+      } else {
+        console.log(error);
+      }
+      console.log(etsyData.results[0]);
+      quantity(etsyData);
+      return etsyData;
+    });
+};
+
+
+
 
 function quantity(JsonObj) {
   var result = [];
   JsonObj.forEach(function(item) {
     result.push(item.quantity);
   });
+  console.log(result);
   return result;
 }
 
